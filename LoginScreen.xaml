@@ -1,0 +1,54 @@
+﻿<Window x:Class="Login.LoginScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login"
+        mc:Ignorable="d"
+        Title="Login" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="FontFamily" Value="Calibri"></Setter>
+            <Setter Property="FontSize" Value="14"></Setter>
+            <Setter Property="Margin" Value="6"></Setter>
+
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="6"></Setter>
+        </Style>
+
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"></RowDefinition>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.Row="0" Background="#9145e8" Orientation="Vertical">
+            <Label Content="Prometheus" FontSize="30" FontFamily="times new roman" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20" Width="162" Height="75"></Label>
+        </StackPanel>
+        <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="136" Margin="285,119,273,162" Width="204">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="User Name " Grid.Row="1" Grid.Column="0"></TextBlock>
+            <TextBox Name="txtUserName"  Grid.Row="1" Grid.Column="1"  HorizontalAlignment="Right" Margin="0,6,6,6" Width="86"/>
+
+            <TextBlock Text="Password " Grid.Row="2" Grid.Column="0"></TextBlock>
+            <PasswordBox x:Name="txtPassword" Grid.Row="2" Grid.Column="1"  HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,6,6" Width="86"/>
+
+            <Button Name="btnSignIn" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" Content="SignIn" Margin="66,0,66,6" Height="Auto" VerticalAlignment="Bottom" Click="btnSignIn_Click"></Button>
+        </Grid>
+    </Grid>
+</Window>

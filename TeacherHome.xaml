@@ -1,0 +1,174 @@
+﻿<Window x:Class="Login.TeacherHome"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login"
+        mc:Ignorable="d"
+       Title="Teacher"  WindowStartupLocation="CenterScreen" ResizeMode="NoResize"  Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" MinWidth="141"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Name="gdMyProfile" Grid.Column="1" Visibility="Hidden" HorizontalAlignment="Center" Margin="59,0,22,0" Width="295" >
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" ></ColumnDefinition>
+                <ColumnDefinition Width="auto" ></ColumnDefinition>
+
+
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="ID" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="24,12,28,12" Height="16" Width="auto"></TextBlock>
+            <TextBlock Text="Name" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="24,12,28,12" Height="16" Width="auto"></TextBlock>
+            <TextBlock Text="Date of Birth " Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="24,12,28,12" Height="16" Width="auto"/>
+            <TextBlock Text="City" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="28,10,0,10" Height="16" Width="auto"></TextBlock>
+            <TextBlock Text="Mobile" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="28,12,32,12"   Height="15" Width="auto"/>
+            <TextBlock Name="txtID"   Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Height="16" Margin="0,12,5,12"  ></TextBlock>
+            <TextBlock Name="txtName" Grid.Row="2" Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Center" Height="16" Margin="0,12,5,12" ></TextBlock>
+            <TextBlock Name="txtDOB" Grid.Row="3" Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Center" Height="16" Margin="0,12,5,12" ></TextBlock>
+            <TextBlock Name="txtCity" Grid.Row="4" Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Center" Height="16" Margin="0,12,5,12"></TextBlock>
+            <TextBlock Name="txtMobile" Grid.Row="5" Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Center" Height="16" Margin="0,12,5,13"></TextBlock>
+            <Button Name="btnEditProfile" Content="Edit Profile" Click="btnEditProfile_Click" Grid.Row="6" Grid.ColumnSpan="2"  Width="auto" Height="auto" HorizontalAlignment="center" VerticalAlignment="Center" Margin="95,10,-29,3"></Button>
+        </Grid>
+
+        <Grid Name="gdEditMyProfile" Grid.Column="1" Visibility="Hidden" HorizontalAlignment="Center" Margin="35,10,72,-10" Width="269" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120" ></ColumnDefinition>
+                <ColumnDefinition Width="auto" ></ColumnDefinition>
+
+
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="ID" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"  Height="auto" Width="auto" Margin="10,13,0,10" ></TextBlock>
+            <TextBlock Text="FirstName" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"  Height="auto" Width="auto" Margin="10,10,0,13" ></TextBlock>
+            <TextBlock Text="LastName" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"  Height="auto" Width="auto" Margin="10,10,0,13" ></TextBlock>
+            <TextBlock Text="Date of Birth " Grid.Row="4" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Height="auto" Width="auto" Margin="10,5,0,10"/>
+            <TextBlock Text="City" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"  Height="auto" Width="auto" Margin="10,13,0,15"></TextBlock>
+            <TextBlock Text="Mobile" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"    Height="auto" Width="auto" Margin="10,10,0,13"/>
+            <TextBox Name="txtSID"  IsReadOnly="True" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Height="auto" Margin="10,10,-1,6"  Width="120"></TextBox>
+            <TextBox Name="txtSFName" Grid.Row="2" Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Center" Height="auto" Margin="10,10,-2,6" Width="120" ></TextBox>
+            <TextBox Name="txtSLName" Grid.Row="3" Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Center" Height="auto" Margin="10,10,-2,6" Width="120" ></TextBox>
+            <DatePicker Name="txtSDOB" Grid.Row="4" Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Center" Height="auto" Margin="10,4,-3,0" Width="120"></DatePicker>
+            <TextBox Name="txtSCity" Grid.Row="5" Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Center" Height="auto" Margin="10,10,0,6" Width="120"></TextBox>
+            <TextBox Name="txtSMobile" Grid.Row="6" Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Center" Height="auto" Margin="11,8,0,8" Width="120"></TextBox>
+            <Button Content="Save Changes" Name="btnUpdateMyProfile" Grid.Row="7" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnUpdateMyProfile_Click"></Button>
+        </Grid>
+        <Grid Grid.Column="1" Name="GridAvaliableCourses" Visibility="Hidden" HorizontalAlignment="Center" Width="auto" Margin="135,62,112,-62">
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="auto"></RowDefinition>
+                <RowDefinition  Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition  Height="auto"></RowDefinition>
+                <RowDefinition  Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Available Courses" FontSize="18" FontWeight="Bold" FontFamily="times new roman" HorizontalAlignment="Center" Margin="69,8,-47,12"></TextBlock>
+            <DataGrid Grid.Row="3" Grid.Column="0" Name="dgAvaliableCourses" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="5,6,-169,6" Height="150" VerticalAlignment="Center" HorizontalScrollBarVisibility="Visible"/>
+            <Button Name="btnTaketheCourse" Content="Take the Course" Grid.Column="0" Grid.Row="4" Margin="68,23,-72,1" Width="164" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnTaketheCourse_Click"></Button>
+        </Grid>
+
+        <Grid Grid.Column="1" Name="GridMyCourses" Visibility="Hidden" HorizontalAlignment="Center" Margin="10,0" Width="auto">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="45"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="1" Margin="10" Text="My Courses" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"></TextBlock>
+                <ComboBox Name="CmbMyCourses" Grid.Column="0" Grid.Row="2" Width="100" ItemsSource="{Binding}" DisplayMemberPath="CourseName" SelectionChanged="lstMyCourses_SelectionChanged"  ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled"></ComboBox>
+                <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Content="Student Details" Margin="10"  Name="btnStudentDetails"  Click="btnStudentDetails_Click"></Button>
+                    <Button Content="Create Homework" Margin="10"   Name="btnCreateHomework" Click="btnCreateHomework_Click"></Button>
+                    <Button Content="View Homework" Margin="10"  Name="btnViewHomework" Click="btnViewHomework_Click"></Button>
+                </StackPanel>
+                <DataGrid Name="dgResult" Grid.Row="5" Margin="10"></DataGrid>
+            </Grid>
+
+        </Grid>
+        <Grid Grid.Column="0" Margin="4,0,3,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" ></RowDefinition>
+                <RowDefinition Height="auto" ></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#8c42f4">
+                <Image Source="D:\Project\Prometheus\Login\images\userIcon.png" HorizontalAlignment="Left" Height="50" Width="50" ></Image>
+                <TextBlock Name="txtUserName"  HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Margin="10">
+                <Button Content="My Profile" Name="btnMyProfile" Margin="7"  Click="btnMyProfile_Click"></Button>
+                <Button Content="Available Courses" Name="btnAvailableCourses" Margin="7" Click="btnAvailableCourses_Click"></Button>
+                <Button Content="My Courses" Name="btnMyCourses" Margin="7"  Click="btnMyCourses_Click"></Button>
+            </StackPanel>
+            <Label Content="Log out"  MouseDoubleClick="Label_MouseDoubleClick" Grid.Row="3" VerticalAlignment="Bottom"  HorizontalAlignment="Center" Margin="20" FontWeight="Bold" FontStyle="Normal" FontFamily="times new roman"></Label>
+
+
+        </Grid>
+        <Grid Name="gdCreateHomework" Grid.Column="1" Visibility="Hidden" HorizontalAlignment="Center" Margin="10,0" Width="auto">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="1" Margin="10" Grid.ColumnSpan="2" Text="Create Homework" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold"></TextBlock>
+
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Description" VerticalAlignment="Center" Margin="5"></TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="DeadLine" VerticalAlignment="Center" Margin="5"></TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Time Required (in Days)" VerticalAlignment="Center" Margin="5"></TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="Long Description" VerticalAlignment="Center" Margin="5"></TextBlock>
+
+            <TextBox Grid.Row="2" Grid.Column="1" Name="txtDescription" VerticalAlignment="Center" Margin="5"></TextBox>
+            <DatePicker Grid.Row="3" Grid.Column="1" Name="dpDeadLine" VerticalAlignment="Center" Margin="5"></DatePicker>
+            <TextBox Grid.Row="4" Grid.Column="1" Name="txtReqTime" VerticalAlignment="Center" Margin="5"></TextBox>
+            <TextBox Grid.Column="1" Grid.Row="5" Grid.RowSpan="2" Name="txtLongDescrip" HorizontalAlignment="Center" Margin="5" Width="160"></TextBox>
+            <Button Grid.Row="7" Grid.ColumnSpan="2" Content="Create" Margin="5" HorizontalAlignment="Center" Name="btnInsertNewHomework" Click="btnInsertNewHomework_Click"></Button>
+        </Grid>
+
+    </Grid>
+</Window>
