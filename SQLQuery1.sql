@@ -118,6 +118,9 @@ AS
 	update haritha.Teacher set IsAdmin='no' WHERE TeacherID=@teacherID
 
 RETURN 0;
+
+
+select * from haritha.teacher
 --Creation of Course Table
 	create table haritha.Course(CourseID integer IDENTITY(1,1) Primary Key,
 	CourseName varchar(50),StartDate date,EndDate date);

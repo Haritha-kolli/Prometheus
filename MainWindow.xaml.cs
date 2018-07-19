@@ -61,6 +61,7 @@ namespace Login
                 gdEditMyProfile.Visibility = Visibility.Hidden;
                 gdMyProfile.Visibility = Visibility.Hidden;
                 GridMyCourses.Visibility = Visibility.Hidden;
+
                 dgAvaliableCourses.ItemsSource = bll.GetAvailableCourses();
 
                 //Making the Available COurses Datagrid visible
